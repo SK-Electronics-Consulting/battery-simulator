@@ -2,6 +2,11 @@
 
 A battery simulator is a piece of text equipment which does exactly that, simulates a battery.  The main difference between a battery simulator and a power supply is that the power supply will only source current, while the battery simulator will both source and sink current.  Another way this is said is it is a 1 quadrant vs 2 quadrant power supply.  
 
+# Requirements
+1. Device shall simulate a single cell Lithium Ion battery, so a voltage of 2.0 V - 4.4 V
+1. Device shall have a current output of 1A, both sourcing and sinking.
+1. Device shall be powered by an external power supply. 
+
 # Phases
 ## Phase 1
 Create a circuit that will operate as a 2-quadrant power supply.  This might be as simple as using a high-power output op-amp and a potentiometer. 
