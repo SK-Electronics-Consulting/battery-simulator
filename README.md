@@ -2,6 +2,8 @@
 
 A battery simulator is a piece of text equipment which does exactly that, simulates a battery.  The main difference between a battery simulator and a power supply is that the power supply will only source current, while the battery simulator will both source and sink current.  Another way this is said is it is a 1 quadrant vs 2 quadrant power supply.  
 
+The goal of this project is to make an open-source, lowish-cost battery simulator. This is both to give people access to using devices like this, but also as a design exercise in analog design.  
+
 # Requirements
 1. Device shall simulate a single cell Lithium Ion battery, so a voltage of 2.0 V - 4.4 V
 1. Device shall have a current output of 1A, both sourcing and sinking.
@@ -11,7 +13,17 @@ A battery simulator is a piece of text equipment which does exactly that, simula
 ## Phase 1
 Create a circuit that will operate as a 2-quadrant power supply.  This might be as simple as using a high-power output op-amp and a potentiometer. 
 
-TODO: Check if the op-amp will sink current in addition to sourcing. 
+* TODO: Check if the op-amp will sink current in addition to sourcing. 
+
+### Design Output
+
+The OPA569 was selected as an available (yaaay chip shortage!) high power op-amp.  It has some nifty features that are on the [wishlist](#future-phase-wishlist) while satisfying the basic needs of this phase.  It has a 2A output, along with a 300nV drop-out at 2A.  This means that assuming a 5V source (USB or the like), it can maintain it's output at 4.7V, which is fine simulating 1S Lithium cells. 
+
+### Limitations of Phase 1
+
+* The OPA569 has a max voltage of 5.5V, so only 1S Lithium batteries will be doable.
+* Current Monitor pin can only indicate sourcing current.  This could be fixed a couple ways, but is going to stay out of scope for this phase. 
+
 
 
 ## Future Phase Wishlist
