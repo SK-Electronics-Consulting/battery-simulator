@@ -931,6 +931,15 @@
     (uuid 520afa41-6812-41f8-87c0-90be5cd1c831)
   )
 
+  (label "CC1" (at 71.12 62.23 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 968b8fb5-8d01-4212-8cf8-d87a26cb2570)
+  )
+  (label "CC2" (at 71.12 64.77 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid d9421515-f930-41a7-8a83-d3b5c12f2217)
+  )
+
   (hierarchical_label "SDA" (shape bidirectional) (at 147.32 59.69 0)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 1a33b477-8f7c-4561-9647-8e7762be73d4)
